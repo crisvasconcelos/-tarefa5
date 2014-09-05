@@ -1,4 +1,5 @@
 <?php
+include_once '../Login/permissao.php';
 include '../header.php';
 include '../../model/classUsuario.php';
 include '../../conexao.php';

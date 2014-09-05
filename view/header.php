@@ -1,3 +1,4 @@
+<?php include 'Login/restrito.php';?>
 <!DOCTYPE html>
 
 <html lang="pt-br">
@@ -20,8 +21,11 @@
                     <div class="container">
                         <a class="navbar-brand" href="/index.php">Inicio</a> 
                         <a class="navbar-brand" href="/view/Restaurante/listar_restaurante.php">Cardapio</a>
+                        <?php if ($_SESSION['admin']): ?>
                         <a  class="navbar-brand" href="/view/Usuario/listar_usuario.php">Usuário</a>
-                        <a  class="navbar-brand" href="/view/Login/login.php">Sair</a>
+                        <?php endif; ?>
+                        <a class="navbar-brand" href="/view/Pedidos/listar_pedidos.php"> Pedidos</a>
+                        <a  class="navbar-brand" href="/view/Login/logout.php">Sair</a>
                     </div>
                 </nav>
             </header>

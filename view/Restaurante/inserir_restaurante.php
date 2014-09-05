@@ -1,4 +1,6 @@
 <?php
+
+require_once '../Login/permissao.php';
 require_once '../header.php';
 
 ?>

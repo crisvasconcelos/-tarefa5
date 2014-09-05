@@ -1,5 +1,6 @@
 <?php
 
+require_once '../Login/permissao.php';
 require_once '../header.php';
 include '../../model/classComida.php';
 include '../../conexao.php';

@@ -1,5 +1,5 @@
 <?php
 session_start();
 if (!isset($_SESSION['logado'])) {
-    header("location: /LOGIN/login.php");
+    header("location: /view/Login/login.php");
 }

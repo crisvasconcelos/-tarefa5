@@ -13,8 +13,10 @@ $dado = $comida->getAll();
             <th> # </th>
             <th> comida </th>
             <th> preços</th> 
-            <th> Editar </th>
-            <th> Excluir</th>
+            <?php if ($_SESSION['admin']): ?>
+                <th> Editar </th>
+                <th> Excluir</th>
+            <?php endif; ?>
         </tr>
     </thead>
     <tbody>
@@ -23,10 +25,14 @@ $dado = $comida->getAll();
                 <td> <?= $row->id; ?> </td>
                 <td> <?= $row->comida; ?> </td>
                 <td> <?= $row->precos; ?> </td>
-                <td><a href="../../view/Restaurante/editar_restaurante.php?id=<?= $row->id; ?>" class="btn btn-info">Editar</a></td>
-                <td><a href="../../controller/restaurante_deletar.php?id=<?= $row->id; ?>" class="btn btn-danger" > Excluir</a></td>
+                <?php if ($_SESSION['admin']): ?>
+                    <td><a href="../../view/Restaurante/editar_restaurante.php?id=<?= $row->id; ?>" class="btn btn-info">Editar</a></td>
+                    <td><a href="../../controller/restaurante_deletar.php?id=<?= $row->id; ?>" class="btn btn-danger" > Excluir</a></td>
+                <?php endif; ?>
             </tr>
         <?php endforeach; ?>
     </tbody>
 </table>
+<?php if ($_SESSION['admin']): ?>
 <a href="/view/Restaurante/inserir_restaurante.php" class="btn btn-success">Inserir</a>
+<?php endif;?>

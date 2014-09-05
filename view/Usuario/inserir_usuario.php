@@ -1,5 +1,6 @@
 <?php
 require_once '../header.php';
+require_once '../Login/permissao.php';
 ?>
 <div class="col-md-5">
     <form class="form-horizontal" action="../../controller/usuario_inserir.php" method="POST">
@@ -20,6 +21,12 @@ require_once '../header.php';
                 <div class = "col-sm-10">
                     <input type = "password" name = "senha" required = "" value = "<?= $dados->senha; ?>" />
                 </div>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" name="isadmin">
+                    administrador
+                </label>
             </div>
 
             <div class = "form-group">

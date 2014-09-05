@@ -1,6 +1,6 @@
 <?php
 
-include 'Crud.php';
+include_once 'Crud.php';
 
 class Comida extends Crud {
 
